@@ -105,11 +105,4 @@ public class PetController {
             return petRepository.save(pet);
         })).map(petMapper::toPetFullDto);
     }
-
-
-    @GetMapping("/pg/{page}")
-    public Mono<Page<Pet>> getAll(@PathVariable int page) {
-        Mono<Page<Pet>> pet = petRepository.findBy(PageRequest.of(page, 10));
-        return pet;
-    }
 }

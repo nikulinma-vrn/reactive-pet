@@ -10,5 +10,4 @@ import reactor.core.publisher.Mono;
 
 public interface PetRepository extends ReactiveCrudRepository<Pet, Long> {
 
-    Mono<Page<Pet>> findBy(Pageable pageable);
 }
